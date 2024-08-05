@@ -1,0 +1,728 @@
+/* 边框虚线 */
+/* * {
+  border: 1px dashed rgb(255, 0, 0);
+} */
+body {
+  display: flex;
+  /* min-height: 100vh; */
+  flex-direction: column;
+  margin: 0;
+  min-width: 950px;
+  background-color: rgb(255, 255, 255);
+}
+.header {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  /* 头部图标栏 */
+  .head {
+    background-color: rgb(255, 255, 255);
+    height: 5vw;
+    min-height: 50px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* justify-content: center; */
+    /* logo及公司名字 */
+    .companylogo {
+      display: flex;
+      flex: 4;
+      height: 100%;
+      align-items: center;
+      padding-left: 14vw;
+      img {
+        width: 3.5vw;
+        height: 3.5vw;
+        min-height: 40px;
+        min-width: 40px;
+        border-radius: 1.75vw;
+      }
+      a {
+        color: #000;
+        font-size: calc(20px + 0.5vw);
+        font-weight: bold; /* 字体粗细 */
+        text-decoration: none;
+        /* white-space: nowrap; */
+      }
+      /* 当鼠标移到a标签悬停hover 时，会出现下划线 */
+      a:hover {
+        border-bottom: 0.25vw solid #000;
+        /* text-decoration: 6px; */
+      }
+    }
+    /* 电话 */
+    .phone {
+      display: flex;
+      flex: 1;
+      height: 100%;
+      align-items: center;
+      padding-right: 4vw;
+      img {
+        width: 1.1vw;
+        height: 1.1vw;
+        min-height: 10px;
+        min-width: 10px;
+        margin-right: 0.5vw;
+      }
+      h4 {
+        font-size: calc(10px + 0.5vw);
+        margin-right: 3vw;
+      }
+      .ball {
+        width: 1.1vw;
+        height: 1.1vw;
+        min-height: 10px;
+        min-width: 10px;
+        border-radius: 0.55vw;
+      }
+      .language {
+        font-size: calc(10px + 0.5vw);
+        margin: 0 0.5vw;
+        a {
+          text-decoration: none;
+          color: #000;
+          border-radius: 0.3vw;
+        }
+        a:hover {
+          /* border-bottom: 0.25vw solid #000; */
+          /* text-decoration: 6px black; */
+          background-color: #52746e;
+          color: white;
+        }
+      }
+    }
+  }
+  /* 导航栏 */
+  .Navigation {
+    background-color: #aed1cb;
+    height: 2vw;
+    min-height: 20px;
+    min-width: 420px;
+    display: flex;
+    /* 将四个角变成4px大小的圆角 */
+    border-radius: 0.2vw;
+    /* 边框加个框线 */
+    border-top: 1px solid #5d8b83;
+    border-bottom: 1px solid #5d8b83;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* margin: auto 200px; */
+    padding: 0.1vw 20vw;
+    text-align: center;
+    a {
+      width: 15vw;
+      vertical-align: middle;
+      padding: 0.25vw 0vw;
+      color: #000;
+      /* font-size: 1vw; */
+      font-size: calc(12px + 0.4vw);
+      font-weight: bold;
+      text-decoration: none;
+    }
+    /* 当鼠标移到a标签悬停时，会出现下划线 */
+    a:hover {
+      background-color: rgb(40, 64, 115);
+      color: white;
+      border-radius: 0.2vw;
+    }
+    .mulu {
+      /* text-decoration: underline 2px solid #000;
+        text-underline-offset: 20%; */
+      background-color: white;
+      border-radius: 0.2vw;
+    }
+  }
+}
+
+.photo {
+  height: 37vw;
+  background-image: url("image/科创园.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* opacity: 0.8; */
+  border-radius: 0.2vw;
+  .biaoyu {
+    display: flex;
+    flex-direction: column;
+    height: 37vw;
+    background: rgba(187, 211, 207, 0.35);
+    h2 {
+      margin: 10vw auto 2vw 20vw;
+      font-size: 4vw;
+      color: #003cff;
+      font-family: KaiTi;
+      -webkit-text-stroke: 1px #003cff;
+      /* 描边 */
+    }
+    p {
+      margin: 0vw auto 2vw 20vw;
+      font-size: 1.8vw;
+      color: #003cff;
+      font-family: FangSong;
+      -webkit-text-stroke: 1px #003cff;
+    }
+    h4 {
+      margin: 0vw auto 2vw 20vw;
+      font-size: 2vw;
+      color: #003cff;
+      font-family: FangSong;
+      -webkit-text-stroke: 1px #003cff;
+    }
+  }
+}
+
+.footer {
+  /* height: 150px; */
+  display: flex;
+  width: 100%;
+  background-color: #000;
+  flex-direction: column;
+  /* position: fixed;
+    bottom: 0; */
+  margin-bottom: 0;
+  .yeweimulu {
+    height: 7vw;
+    margin: 10px 5vw;
+    a {
+      display: block;
+      width: 12vw;
+      /* float: left; */
+      font-size: 1vw;
+      /* text-align: center; */
+      color: #ffffff;
+      margin: 2px auto 2px 0;
+      text-decoration: none;
+    }
+    /* 当鼠标移到a标签悬停时，会出现下划线 */
+    a:hover {
+      /* 字体下划线 */
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      border-radius: 0.5vw;
+    }
+    .mulu {
+      background-color: rgb(62, 61, 61);
+      border-radius: 0.5vw;
+    }
+  }
+  .beian {
+    display: flex;
+    justify-content: center;
+    .copyright {
+      transform: translateX(-50%);
+      height: 2vw;
+      color: rgb(149, 149, 149);
+      font-size: 0.7vw;
+      margin-left: 10vw;
+    }
+    a {
+      height: 2vw;
+      color: rgb(149, 149, 149);
+      font-size: 0.7vw;
+    }
+  }
+}
+/* footer */
+
+/* 首页内容 */
+.neirong {
+  /* min-height: 100vh; */
+  .title {
+    font-size: 1.5vw;
+    text-align: center;
+    margin: 3vw auto 1.5vw auto;
+    .titleen {
+      font-size: 1vw;
+      color: #999;
+      margin-top: 0.4vw;
+    }
+  }
+  /* 主要产品 */
+  .Mainproduct {
+    display: flex;
+    height: 41vw;
+    border-radius: 4px;
+    background-color: #bbd3cf;
+    .item {
+      /* flex: 1; */
+      display: flex;
+      height: 40vw;
+      flex-direction: column;
+      margin: 10px 2vw;
+      .tupianqu {
+        border: 2px solid #a5a8ac;
+        border-radius: 4px;
+        width: calc(100px + 15vw);
+        height: 28vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        img {
+          width: calc(80px + 14vw);
+          /* object-fit: contain; */
+          overflow: hidden;
+          border-radius: 6px;
+          /* border: 2px ridge #ffffff; */
+        }
+      }
+      .jieshao {
+        /* flex: 2; */
+        width: calc(100px + 15vw);
+        margin: 0;
+        h4 {
+          font-size: 1vw;
+          font-weight: normal;
+          margin: 1vw 0;
+          text-align: center;
+        }
+        p {
+          font-size: 0.8vw;
+          text-indent: 24px; /*首字缩进*/
+          color: #464646;
+          /* overflow: auto; */
+          padding: 0.5vh 1.5vh 0 1.5vh;
+          border: 1px solid rgb(125, 125, 156);
+          border-radius: 4px;
+          text-align: justify;
+          /* text-align: center; */
+        }
+      }
+    }
+  }
+  /* 关于我们 */
+  .Aboutus {
+    width: 76%;
+    height: 25vw;
+    padding-top: 5vw;
+    margin: 0 auto 80px auto;
+    border-radius: 5px;
+    background-color: #aed1cb;
+    /* padding: 40px 0; */
+    display: flex;
+    text {
+      color: #999;
+    }
+    img {
+      width: 25vw;
+      object-fit: contain;
+      border-radius: 6px;
+      margin: 20px 10px auto auto;
+      border: 2px solid #6694d8;
+    }
+    .text {
+      /* padding: 5px 10px; */
+      h4 {
+        margin: 0;
+        padding-left: 6vw;
+        border-bottom: 2px solid #4570b1;
+        color: #4a70aa;
+        font-size: 1.5vw;
+        line-height: 2;
+        display: inline-block;
+      }
+      p {
+        margin: 0;
+        padding: 1.5vw 0.5vw 1.5vw 6vw;
+        color: #414141;
+        font-size: 0.9vw;
+        text-align: justify;
+        text-indent: 2vw;
+        line-height: 1.8;
+      }
+      .more {
+        display: inline-block;
+        width: auto;
+        border: 2px solid #7a7979;
+        border-radius: 4px;
+        line-height: 1.8;
+        margin-left: 6vw;
+        font-size: 1vw;
+        text-align: center;
+        text-decoration: none;
+        color: #646363;
+      }
+    }
+  }
+}
+
+/* 产品中心 */
+.chanpincenter {
+  min-height: 100vh;
+  width: 100%;
+  margin: 0 auto;
+  .title {
+    font-size: 2vw;
+    /* background-color: #ffffff; */
+    /* text-align: center; */
+    padding: 3vw 0 1.5vw 15vw;
+    .titleen {
+      font-size: 1vw;
+      color: #616060;
+      margin-top: 0.4vw;
+    }
+  }
+  .pt_title {
+    font-size: 1.3vw;
+    text-align: center;
+    background-color: #5a84c4;
+    border-radius: 0.3vw;
+    margin: 1vw auto 1vw 15vw;
+    width: auto;
+    border: 2px solid #7a7979;
+  }
+  .pt_list {
+    display: flex;
+    flex-direction: column;
+    background-color: #aed1cb;
+    min-width: 700px;
+    border-radius: 4px;
+  }
+  .list {
+    width: 90vw;
+    min-width: 855px;
+    margin: 0 auto;
+    border-radius: 2px;
+    border: 2px solid #646464;
+    background-color: #a5c4bf;
+  }
+  .line3 {
+    display: flex;
+    justify-content: center;
+    justify-content: space-around;
+    /* background-color: #91a8aa; */
+    .type {
+      /* width: calc(150px + 18vw); */
+      width: 30vw;
+      min-width: 240px;
+      margin: 1vw;
+      border-radius: 5px;
+      background-color: #e4e3e3;
+      border: 2px solid #7a7979;
+      display: flex;
+      .picture {
+        /* width: calc(150px + 18vw); */
+        /* display: block; */
+        width: 27vw;
+        min-width: 240px;
+        /* margin: 0 auto; */
+        img {
+          display: block;
+          height: 15vw;
+          object-fit: contain;
+          border-radius: 6px;
+          margin: 0.5vw auto;
+          border: 2px solid #8b95a3;
+        }
+      }
+
+      .text {
+        /* padding: 5px 10px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h4 {
+          margin: 0;
+          height: auto;
+          padding-left: 2vw;
+          border-bottom: 2px solid #4570b1;
+          color: #4a70aa;
+          font-size: calc(10px + 0.3vw);
+          line-height: 2;
+          display: inline-block;
+        }
+        p {
+          /* width: calc(200px + 14.5vw); */
+          display: block;
+          margin: auto 0.5vw;
+          color: #1f1e1e;
+          font-size: calc(7px + 0.5vw);
+          text-align: justify;
+          text-indent: 2vw;
+          line-height: 1.8;
+        }
+        .more {
+          display: flex;
+          width: 4.7vw;
+          border: 2px solid #7a7979;
+          border-radius: 4px;
+          margin: auto 0.3vw 0.1vw auto;
+          font-size: 0.8vw;
+          a {
+            text-decoration: none;
+            margin: 0 auto;
+            color: #646363;
+            line-height: 1.8;
+          }
+        }
+      }
+    }
+  }
+  .line2 {
+    display: flex;
+    justify-content: center;
+    /* background-color: #91a8aa; */
+    .type {
+      width: calc(300px + 14.5vw);
+      /* height: 20vw; */
+      margin: 1vw;
+      border-radius: 5px;
+      background-color: #e4e3e3;
+      border: 2px solid #7a7979;
+      display: flex;
+      .picture {
+        width: calc(300px + 14.5vw);
+        img {
+          display: block;
+          height: calc(80px + 10vw);
+          object-fit: contain;
+          border-radius: 6px;
+          margin: 0.5vw auto;
+          border: 2px solid #8b95a3;
+        }
+      }
+      .text {
+        /* padding: 5px 10px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h4 {
+          margin: 0;
+          padding-left: 2vw;
+          display: inline-block;
+          border-bottom: 2px solid #4570b1;
+          color: #4a70aa;
+          font-size: calc(10px + 0.3vw);
+          line-height: 2;
+        }
+        p {
+          /* width: calc(200px + 15vw); */
+          display: block;
+          margin: auto 0.5vw;
+          color: #1f1e1e;
+          font-size: calc(7px + 0.5vw);
+          text-align: justify;
+          text-indent: 2vw;
+          line-height: 1.8;
+        }
+        .more {
+          display: flex;
+          width: 4.7vw;
+          border: 2px solid #7a7979;
+          border-radius: 4px;
+          margin: auto 0.3vw 0.1vw auto;
+          font-size: 0.8vw;
+          a {
+            text-decoration: none;
+            margin: 0 auto;
+            color: #646363;
+            line-height: 1.8;
+          }
+        }
+      }
+    }
+  }
+  .line1 {
+    display: flex;
+    justify-content: center;
+    /* background-color: #91a8aa; */
+    .type {
+      width: calc(300px + 18vw);
+      /* height: 20vw; */
+      margin: 1vw;
+      border-radius: 5px;
+      background-color: #e4e3e3;
+      border: 2px solid #7a7979;
+      display: flex;
+      .picture {
+        width: calc(300px + 18vw);
+        img {
+          display: block;
+          height: calc(80px + 10vw);
+          object-fit: contain;
+          border-radius: 6px;
+          margin: 0.5vw auto;
+          border: 2px solid #8b95a3;
+        }
+      }
+      .text {
+        /* padding: 5px 10px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        h4 {
+          margin: 0;
+          padding-left: 2vw;
+          border-bottom: 2px solid #4570b1;
+          color: #4a70aa;
+          font-size: calc(10px + 0.3vw);
+          line-height: 2;
+          display: inline-block;
+        }
+        p {
+          /* width: calc(200px + 14.5vw); */
+          display: block;
+          margin: 0 0.5vw;
+          color: #1f1e1e;
+          font-size: calc(7px + 0.5vw);
+          text-align: justify;
+          text-indent: 2vw;
+          line-height: 1.8;
+        }
+        .more {
+          display: flex;
+          width: 4.7vw;
+          border: 2px solid #7a7979;
+          border-radius: 4px;
+          margin: auto 0.3vw 0.1vw auto;
+          font-size: 0.8vw;
+          a {
+            text-decoration: none;
+            margin: 0 auto;
+            color: #646363;
+            line-height: 1.8;
+          }
+        }
+      }
+    }
+  }
+
+  .P-more {
+    display: block;
+    margin: 0 auto auto 3.5vw;
+    a {
+      size: vw;
+      line-height: 2;
+      color: #000000;
+      text-decoration: none;
+    }
+    a:hover {
+      /* border-bottom: 0.25vw solid #000; */
+      /* background-color: #000; */
+      color: rgb(16, 46, 218);
+    }
+  }
+}
+
+/* 企业信息 */
+.qyxx {
+  min-height: 100vh;
+  .title {
+    font-size: 1.5vw;
+    /* text-align: center; */
+    margin: 3vw auto 1.5vw auto;
+    padding-left: 32vw;
+    .titleen {
+      font-size: 1vw;
+      color: #999;
+      margin-top: 0.4vw;
+    }
+  }
+  .text {
+    width: 650px;
+    min-width: 500px;
+    margin: 0 auto;
+    background-color: #bbd3cf;
+    border: 1px solid rgb(125, 125, 156);
+    border-radius: 4px;
+    .kuang {
+      margin: 1vw;
+    }
+    p {
+      margin: 0;
+      font-size: 20px;
+      text-indent: 40px; /*首字缩进*/
+      color: #464646;
+      text-align: justify;
+      line-height: 1.5;
+      /* text-align: center; */
+    }
+  }
+  .lianjie {
+    display: inline-flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    /* margin: 0 auto; */
+    margin-left: 56vw;
+    text-decoration: none;
+    img {
+      display: flex;
+      /* width: 4vh; */
+      height: 3.5vh;
+      margin-right: 2px;
+      border: 1px dashed #608492;
+      border-radius: 3px;
+    }
+    p {
+      display: inline-block;
+      width: auto;
+      /* border: 2px solid #7a7979; */
+      border-radius: 4px;
+      line-height: 1.8;
+      font-size: 1vw;
+      text-align: center;
+      color: #646363;
+    }
+  }
+}
+
+/* 联系我们 */
+.contact {
+  min-height: 100vh;
+  .title1 {
+    font-size: 1.5vw;
+    /* text-align: center; */
+    margin: 3vw auto 1.5vw auto;
+    padding-left: 31vw;
+    .titleen {
+      font-size: 1vw;
+      color: #999;
+      margin-top: 0.4vw;
+    }
+  }
+  .adress {
+    display: flex;
+    height: 31vw;
+    min-height: 300px;
+    margin: 0 auto 0 31vw;
+    justify-content: center;
+    .img1 {
+      height: 30.7vw;
+      min-height: 300px;
+      border: 2px solid #608492;
+    }
+    .link {
+      display: flex;
+      /* height: 60px; */
+      margin: auto auto 0px 0px;
+      text-decoration: none;
+      .daohangtubiao {
+        display: block;
+        float: left;
+        margin: auto 0 0 10px;
+        width: calc(25px + 1vw);
+        height: calc(25px + 1vw);
+        border: 2px solid #ffffff;
+      }
+      p {
+        display: inline-block;
+        width: auto;
+        margin: auto auto 8px 4px;
+        border-radius: 4px;
+        line-height: 1.4;
+        font-size: calc(9px + 0.5vw);
+        text-align: center;
+        color: #000000;
+        border: 2px dashed #7a7a7a;
+      }
+    }
+  }
+  .phonenumber {
+    size: 20px;
+    margin: 40px auto auto 31vw;
+    line-height: 2;
+    color: #000000;
+  }
+}

@@ -1,0 +1,196 @@
+/* 边框虚线 */
+* {
+  border: 1px dashed rgb(255, 0, 0);
+}
+body {
+  display: flex;
+  /* min-height: 100vh; */
+  flex-direction: column;
+  margin: 0;
+  background-color: rgb(255, 255, 255);
+}
+.header {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  /* 头部图标栏 */
+  .head {
+    background-color: rgb(255, 255, 255);
+    height: 5vw;
+    min-height: 50px;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    /* justify-content: center; */
+    /* logo及公司名字 */
+    .companylogo {
+      display: flex;
+      flex: 4;
+      height: 100%;
+      align-items: center;
+      padding-left: 14vw;
+      img {
+        width: 3.5vw;
+        height: 3.5vw;
+        min-height: 40px;
+        min-width: 40px;
+        border-radius: 1.75vw;
+      }
+      a {
+        color: #000;
+        font-size: calc(20px + 0.5vw);
+        font-weight: bold; /* 字体粗细 */
+        text-decoration: none;
+        /* white-space: nowrap; */
+      }
+      /* 当鼠标移到a标签悬停hover 时，会出现下划线 */
+      a:hover {
+        border-bottom: 0.25vw solid #000;
+        /* text-decoration: 6px; */
+      }
+    }
+    /* 电话 */
+    .phone {
+      display: flex;
+      flex: 1;
+      height: 100%;
+      align-items: center;
+      padding-right: 4vw;
+      img {
+        width: 1.1vw;
+        height: 1.1vw;
+        min-height: 10px;
+        min-width: 10px;
+        margin-right: 0.5vw;
+      }
+      h4 {
+        font-size: calc(10px + 0.5vw);
+        margin-right: 3vw;
+      }
+      .ball {
+        width: 1.1vw;
+        height: 1.1vw;
+        min-height: 10px;
+        min-width: 10px;
+        border-radius: 0.55vw;
+      }
+      .language {
+        font-size: calc(10px + 0.5vw);
+        margin-right: 3vw;
+      }
+    }
+  }
+  /* 导航栏 */
+  .Navigation {
+    background-color: #aed1cb;
+    height: 2vw;
+    min-height: 20px;
+    min-width: 420px;
+    display: flex;
+    /* 将四个角变成4px大小的圆角 */
+    border-radius: 0.5vw;
+    /* 边框加个框线 */
+    border: 2px solid #7db6ac;
+    /* flex-direction: column; */
+    justify-content: center;
+    /* margin: auto 200px; */
+    padding: 0 20vw;
+    text-align: center;
+    a {
+      width: 15vw;
+      vertical-align: middle;
+      padding: 0.25vw 0vw;
+      color: #000;
+      /* font-size: 1vw; */
+      font-size: calc(12px + 0.4vw);
+      font-weight: bold;
+      text-decoration: none;
+    }
+    /* 当鼠标移到a标签悬停时，会出现下划线 */
+    a:hover {
+      background-color: rgb(40, 64, 115);
+      color: white;
+      border-radius: 0.5vw;
+    }
+    .mulu {
+      /* text-decoration: underline 2px solid #000;
+      text-underline-offset: 20%; */
+      background-color: white;
+      border-radius: 0.5vw;
+    }
+  }
+}
+
+.neirong {
+  min-height: 100vh;
+}
+
+.footer {
+  /* height: 150px; */
+  display: flex;
+  width: 100%;
+  background-color: #000;
+  flex-direction: column;
+  /* position: fixed;
+  bottom: 0; */
+  margin-bottom: 0;
+  .yeweimulu {
+    height: 7vw;
+    margin: 10px 5vw;
+    a {
+      display: block;
+      width: 6vw;
+      float: left;
+      font-size: 1.2vw;
+      text-align: center;
+      color: #ffffff;
+      margin: 2px auto;
+      text-decoration: none;
+    }
+    /* 当鼠标移到a标签悬停时，会出现下划线 */
+    a:hover {
+      /* 字体下划线 */
+      background-color: rgb(255, 255, 255);
+      color: rgb(0, 0, 0);
+      border-radius: 0.5vw;
+    }
+    .mulu {
+      background-color: rgb(62, 61, 61);
+      border-radius: 0.5vw;
+    }
+  }
+  .beian {
+    display: flex;
+    justify-content: center;
+    .copyright {
+      transform: translateX(-50%);
+      height: 2vw;
+      color: rgb(149, 149, 149);
+      font-size: 0.7vw;
+      margin-left: 10vw;
+    }
+    a {
+      height: 2vw;
+      color: rgb(149, 149, 149);
+      font-size: 0.7vw;
+    }
+  }
+}
+/* footer */
+
+/* 产品中心 */
+.chanpincenter {
+  min-height: 100vh;
+  .title {
+    font-size: 1.5vw;
+    /* text-align: center; */
+    margin: 3vw auto 1.5vw auto;
+    padding-left: 32vw;
+    .titleen {
+      font-size: 1vw;
+      color: #999;
+      margin-top: 0.4vw;
+    }
+  }
+}
